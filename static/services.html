@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	
+	
+</head>
+<!-- NavBar -->
+   
+	<nav class="navbar navbar-expand-sm navbar-light">
+	  <div class="container-fluid navContainer">
+		<a class="navbar-brand logo" href="">AGRONEST</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		  <ul class="navbar-nav ">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#">Rent a Tool</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/static/weather.html">Weather Forecast</a>
+			</li>			
+			<li class="nav-item">
+			  <a class="nav-link" href="crop-disease.html">Crop Disease Detection</a>
+			</li>			
+			<li class="nav-item">
+			  <a class="nav-link" href="ecommerce/index.html">Ecommerce</a>
+			</li>			
+						
+		  </ul>		  
+		</div>
+	  </div>
+	</nav>
+
+<!-- Main Section -->
+
+<div class="row">
+	<div class="col col1">
+		<h4 class="filter-heading">Filter Tools</h4>
+		<div class="filter-options sidenav">
+			<button class="dropdown-btn">Based On Category
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-container">
+				<input type="radio" id="category1" name="category" value="Tractor">
+				<label for="category1">Tractor</label><br>
+				<input type="radio" id="category2" name="category" value="Harvestor">
+				<label for="category2">Harvestor</label><br>
+				<input type="radio" id="category3" name="category" value="Cultivators">
+				<label for="category3">Cultivators</label><br>
+				<input type="radio" id="category3" name="category" value="Seed Drills">
+				<label for="category3">Seed Drills</label><br>
+				<input type="radio" id="category3" name="category" value="Balers">
+				<label for="category3">Balers</label><br>
+			</div>
+		
+			<button class="dropdown-btn">Based On Price
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="slider-container">
+				<input type="range" id="priceRange" name="price" min="0" max="3000" value="0" class="slider">
+				<span id="selectedPrice">Price: 0</span>
+			</div>
+		
+		
+			<button class="dropdown-btn">Based On City
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-container">
+				<input type="radio" id="city1" name="city" value="Noida">
+				<label for="city1">Noida</label><br>
+				<input type="radio" id="city2" name="city" value="Punjab">
+				<label for="city2">Punjab</label><br>
+				<input type="radio" id="city3" name="city" value="Haryana">
+				<label for="city3">Haryana</label><br>
+			</div>
+		
+			<button onclick="applyFilter()" class="apply-btn">Apply Filter</button>
+			<button onclick="resetFilter()" class="reset-btn">Reset Filter</button>
+		</div>
+		
+		
+		
+	</div>
+	
+	<div class="col col2 cards-container">
+		<div class="container text-center">
+			<div class="row align-items-start">
+				
+			  <div class="col">
+				<div class="card cards" style="width: 18rem;">
+					<img src="/static/images/tractort.png" class="card-img-top" alt="...">
+					<div class="card-body ">
+					  <h4 class="card-title category">Tractor</h4>
+					  <h6 class="card-text city">Punjab</h6><h6 class="price">Rs.</h6><h6 class="card-text price1">500</h6><h6 class="tag">/hr</h6><br>
+					  <p class="card-text desc">A tractor is an engineering vehicle specifically designed to deliver a high tractive effort (or torque) at slow speeds</p>
+					  <button class="btn btn-primary book-now" data-title="Tractor">Book Now</button>
+					</div>
+				</div>
+			  </div>
+			  <div class="col">
+				<div class="card cards" style="width: 18rem;">
+					<img src="/static/images/tractort.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h4 class="card-title category">Tractor</h4>
+					  <h6 class="card-text city">Noida</h6><h6 class="price">Rs.</h6><h6 class="card-text price1">400</h6><h6 class="tag">/hr</h6><br>
+					  <p class="card-text desc">A tractor is an engineering vehicle specifically designed to deliver a high tractive effort (or torque) at slow speeds.</p>
+					  <button class="btn btn-primary book-now" data-title="Tractor">Book Now</button>
+					</div>
+				</div>
+			  </div>
+			  <div class="col">
+				<div class="card cards" style="width: 18rem;">
+					<img src="/static/images/balers.jpeg" class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h4 class="card-title category">Balers</h4>
+					  <h6 class="card-text city">Haryana</h6><h6 class="price">Rs.</h6><h6 class="card-text price1">200</h6><h6 class="tag">/hr</h6><br>
+					  <p class="card-text desc">Used to compress a cut and raked crop (such as hay, cotton, flax straw, salt marsh hay, or silage) into compact bales that are easy to handle, transport, and store.</p>
+					  <button class="btn btn-primary book-now" data-title="Balers">Book Now</button>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<div class="container text-center">
+			<div class="row align-items-start">
+			  <div class="col">
+				<div class="card cards" style="width: 18rem;">
+					<img src="/static/images/cultivator.png" class="card-img-top" alt="...">
+					<div class="card-body ">
+					  <h4 class="card-title category">Cultivators</h4>
+					  <h6 class="card-text city">Haryana</h6><h6 class="price">Rs.</h6><h6 class="card-text price1">2000</h6><h6 class="tag">/hr</h6><br>
+					  <p class="card-text desc">Farm implement or machine designed to stir the soil around a crop as it matures to promote growth and destroy weeds</p>
+					  <button class="btn btn-primary book-now" data-title="Cultivator">Book Now</button>
+					</div>
+				</div>
+			  </div>
+			  <div class="col">
+				<div class="card cards" style="width: 18rem;">
+					<img src="/static/images/cultivator.png"  class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h4 class="card-title category">Cultivators</h4>
+					  <h6 class="card-text city">Noida</h6><h6 class="price">Rs.</h6><h6 class="card-text price1">200</h6><h6 class="tag">/hr</h6><br>
+					  <p class="card-text desc">Farm implement or machine designed to stir the soil around a crop as it matures to promote growth and destroy weeds</p>
+					  <button class="btn btn-primary book-now" data-title="Cultivators">Book Now</button>
+
+					</div>
+				</div>
+			  </div>
+			  <div class="col">
+				<div class="card cards" style="width: 18rem;">
+					<img src="/static/images/seed drills.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h4 class="card-title category">Seed Drills</h4>
+					  <h6 class="card-text city">Punjab</h6><h6 class="price">Rs.</h6><h6 class="card-text price1">600</h6><h6 class="tag">/hr</h6><br>
+					  <p class="card-text desc">A seed drill is a device or an agricultural tool that helps in sowing the seeds for a crop by metering or measuring the seeds and placing them in the soil at the appropriate depth and distance.</p>
+					  <button class="btn btn-primary book-now" data-title="Seed Drills">Book Now</button>
+
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		
+		
+</div>	
+
+
+<!-- chatbox -->
+
+<div class="containerchatboxx">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Avani. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer" style="padding: 15px;">
+                <input type="text" id="userInput" placeholder="Write a message...">
+                <button class="chatbox__send--footer" id="sendButton" style="background-color: transparent; outline: none; border: none; width: 30px; margin-right: 10px;">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button" id="openButton">
+            <button><img src="images/cc.png" /></button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup box -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2 id="popup-title">Book Tractor</h2>
+        <form class="booking-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <button type="submit" class="btn btn-success submit">Submit</button>
+            <button type="button" class="btn btn-danger close-btn">Close</button>
+        </form>
+    </div>
+</div>
+
+<!-- Success Pop Up -->
+
+<div class="popup" id="confirmation-popup">
+    <div class="popup-content">
+        <h2>Success!</h2>
+        <p id="confirmation-message"></p>
+        <button type="button" class="btn btn-primary close-confirmation-btn">Close</button>
+    </div>
+</div>
+<!-- footer section start -->
+<!-- <div class="footer_section layout_padding">
+	<div class="container">
+	   <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+	   
+	   <div class="footer_menu">
+		  <ul>
+			 <li><a href="/static/services.html">Farm Equip</a></li>
+			 <li><a href="#">Weather Forecast</a></li>
+			 <li><a href="#">Crop Disease Detection</a></li>
+			 <li><a href="/static/ecommerce/index.html">Ecommerce</a></li>
+			 
+		  </ul>
+	   </div>
+	   
+	</div>
+ </div> -->
+ <!-- footer section end -->
+ <!-- copyright section start -->
+ <!-- <div class="copyright_section">
+	<div class="container">
+	   <p class="copyright_text">© 2024 All Rights Reserved. </p>
+	</div>
+ </div> -->
+ <!-- copyright section end -->
+<!-- JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="app.js"></script>
+    <script>
+    
+
+	// Dropdown Logic
+
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	dropdown[i].addEventListener("click", function() {
+		this.classList.toggle("active1");
+		var dropdownContent = this.nextElementSibling;
+		if (dropdownContent.style.display === "block") {
+		dropdownContent.style.display = "none";
+		} else {
+		dropdownContent.style.display = "block";
+		}
+	});
+} 
+
+// Filter Button Logic
+
+       
+	const priceRange = document.getElementById('priceRange');
+    const selectedPrice = document.getElementById('selectedPrice');
+
+    priceRange.addEventListener('input', function() {
+        selectedPrice.textContent = 'Price: ' + this.value;
+    });
+
+    function applyFilter() {
+        let selectedCategory = document.querySelector('input[name="category"]:checked');
+        let selectedPrice = document.getElementById('priceRange').value;
+        let selectedCity = document.querySelector('input[name="city"]:checked');
+
+        let cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            let category = card.querySelector('.category').innerText;
+            let price = card.querySelector('.price1').innerText;
+            let city = card.querySelector('.city').innerText;
+
+            if ((selectedCategory && category !== selectedCategory.value) ||
+                (parseInt(price) > parseInt(selectedPrice)) ||
+                (selectedCity && city !== selectedCity.value)) {
+                card.style.display = 'none';
+            } else {
+                card.style.display = 'block';
+            }
+        });
+    }
+
+    function resetFilter() {
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.checked = false;
+        });
+
+        document.getElementById('priceRange').value = 0;
+        document.getElementById('selectedPrice').textContent = 'Price: 0';
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.display = 'block';
+        });
+    }
+
+	// Book Now Popup Logic
+
+	document.addEventListener('DOMContentLoaded', function () {
+    const bookNowBtns = document.querySelectorAll('.book-now');
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const closeBtn = document.querySelector('.close-btn');
+    const confirmationPopup = document.getElementById('confirmation-popup');
+    const closeConfirmationBtn = document.querySelector('.close-confirmation-btn');
+
+    bookNowBtns.forEach((btn) => {
+        btn.addEventListener('click', function () {
+            const title = btn.getAttribute('data-title');
+            popupTitle.textContent = `Book ${title}`;
+            popup.style.display = 'block';
+        });
+    });
+
+    closeBtn.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+
+    closeConfirmationBtn.addEventListener('click', function () {
+        confirmationPopup.style.display = 'none';
+    });
+
+    // You can add more functionality to handle form submission and other details
+    const bookingForm = document.querySelector('.booking-form');
+    bookingForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Handle form submission here, for example:
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const toolName = document.getElementById('popup-title').textContent.replace('Book ', '');
+        document.getElementById('confirmation-message').textContent = `Your ${toolName} is successfully booked for ${date}. We will contact you at ${phone}.`;
+        confirmationPopup.style.display = 'block';
+        popup.style.display = 'none';
+    });
+});
+
+
+
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+</body>
+</html>

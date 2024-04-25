@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    background: #F1F1F1;
+}
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, #581B98 0.52%, #9C1DE7 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #581B98 -2.14%, #9C1DE7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #581B98;
+}
+
+/* NavBar */
+.navbar{
+    background-color: #00aa33;
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.nav-link{
+    font-size: 14px;
+}
+
+/* CHATBOX
+=============== */
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+}
+
+.chatbox__support {
+    background: #f9f9f9;
+    height: 450px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* HEADER */
+.chatbox__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white;
+}
+
+/* Messages */
+.chatbox__messages {
+    padding: 0 20px;
+}
+
+.messages__item {
+    margin-top: 10px;
+    background: #E0E0E0;
+    padding: 8px 12px;
+    max-width: 70%;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: var(--secondaryGradient);
+    box-shadow: var(--secondaryBoxShadow);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 20px;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.chatbox__send--footer {
+    color: white;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    padding: 10px;
+    background: white;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+.containerchatboxx {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.chatbox {
+    position: absolute;
+}
+
+.scrolled-down .container {
+    bottom: 10px; /* Adjust position when scrolled down */
+    right: 10px; /* Adjust position when scrolled down */
+}
+
+    .chatbox__header{
+        background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    }
+
+    .chatbox__footer{
+        background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    }
+
+    .chatbox__button img{
+        height: 35px;
+        width: 38px;
+    }
+
+	/* Main Section */
+	.row{
+		padding: 40px;
+	}
+
+    .col{
+        flex-basis: calc(33.333% - 1rem);
+            margin: 0.5rem;
+    }
+
+
+	.col1{
+        text-align: center;
+        height: 100%;
+		max-width: 25%;
+        padding-bottom: 50px;
+        border: solid 2px #00aa33;
+        border-radius: 7px;
+        background-color: white;
+	}
+
+	.col2{
+        height: 100vh;
+		/* background-color: red; */
+		max-width: 75%;
+        /* overflow-x: auto; */
+	}
+
+    .filter-heading{
+        padding: 50px;
+    }
+
+    .filter-options{
+        text-align: left;
+        padding-left: 40px;
+    }
+    .sidenav>a, .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #2c2c2c;
+        display: block;
+        border: none;
+        background: none;
+        width:100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+      
+      /* On mouse-over */
+      
+      
+      /* Main content */
+      .main {
+        margin-left: 200px; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+      }
+      
+      /* Add an active class to the active dropdown button */
+      .active1 {
+        
+        color: #00aa33;
+      }
+      
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        margin: 10px;
+        display: none;
+      }
+
+      label{
+        font-size: 20px;
+      }
+      
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+
+      .apply-btn {
+        margin-top: 40px;
+        padding: 10px;
+        border-radius: 6px;
+        background-color: #00aa33;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .reset-btn {
+        margin-top: 40px;
+        padding: 10px;
+        background-color: white;
+        color: #00aa33;
+        border:none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    
+    
+
+    /* Cards Section */
+    .city,.price,.price1,.tag{
+        
+        display: inline;
+    }
+
+    .price{
+        margin-left: 60px;
+    }
+
+    .cards-container {
+        padding-left: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 10px; */
+    }
+
+    .desc{
+        padding: 10px;
+        text-align: justify;
+    }
+
+    /* PopUp Box */
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 1000;
+        
+    }
+
+    .popup-content {
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        width: 500px;
+        border-radius: 8px;
+    }
+
+    .submit,.close-btn{
+        margin-top: 20px;
+    }
+
+    /* footer starts */
+    .footer_section {
+        width: 100%;
+        float: left;
+        background-color: #252525;
+        height: auto;
+    }
+    
+    .footer_logo {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .input_bt {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        border-bottom: 1px solid #ffffff !important;
+    }
+    
+    .mail_bt {
+        width: 100%;
+        float: left;
+        font-size: 18px;
+        color: #fff;
+        background-color: transparent;
+        padding: 5px 0px 5px 0px;
+        height: 60px;
+        border: 0px;
+    }
+    
+    input.mail_bt::placeholder {
+        color: #fff;
+    }
+    
+    .subscribe_bt {
+        width: 30%;
+        float: right;
+        font-size: 16px;
+        color: #f26522;
+        background-color: transparent;
+        padding: 20px 0px 5px 0px;
+        border-radius: 30px;
+        border: 0px;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    
+    .subscribe_bt a {
+        color: #f26522;
+    }
+    
+    .subscribe_bt a:hover {
+        color: #ffffff;
+    }
+    
+    .footer_menu {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .footer_menu ul {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+    }
+    
+    .footer_menu li {
+        float: left;
+        font-size: 16px;
+        color: #f1f1f1;
+        padding: 20px 10px 0px 10px;
+    }
+    
+    .footer_menu li a {
+        color: #f1f1f1;
+    }
+    
+    .footer_menu li a:hover {
+        color: #f26522;
+    }
+    
+    .location_main {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+    }
+    
+    .location_main {
+        float: left;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 30px 30px 30px 30px;
+    }
+    
+    .location_main a {
+        color: #ffffff;
+    }
+    
+    .location_main a:hover {
+        color: #f26522;
+    }
+    
+    
+    /* footer section end */
+    
+    
+    /* copyright section start */
+    
+    .copyright_section {
+        width: 100%;
+        float: left;
+        background-color: #252525;
+        height: auto;
+    }
+    
+    .copyright_text {
+        width: 100%;
+        float: left;
+        color: #ffffff;
+        text-align: center;
+        font-size: 16px;
+        margin: 20px 0px;
+    }
+    
+    .copyright_text a {
+        color: #ffffff;
+    }
+    
+    .copyright_text a:hover {
+        color: #f26522;
+    }
+    
+    .margin_top90 {
+        margin-top: 90px;
+    }
+    
+    
+    /* copyright section end */
+    

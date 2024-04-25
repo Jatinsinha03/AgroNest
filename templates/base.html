@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AgroNest</title>
+</head>
+<style>
+     .vl1 {
+        position: absolute;
+        top: 120px;
+        left: 48%;
+        border-left: 6px solid rgb(255, 255, 255);
+        height: 500px;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        height: fit-content;
+      }
+
+      .grid-item {
+        height: 100vh;
+      }
+
+      .first {
+        font-family: "Geologica", sans-serif;
+        font-weight: 800;
+        line-height: 40px;
+        color: #1abc9c;
+        text-align: center;
+        background: #ffffff;
+        border: none;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 60px;
+      }
+
+      h1.heading1 {
+        padding-top: 36vh;
+      }
+
+      .second {
+        text-align: center;
+        background-color: #ffffff;
+      }
+
+      .basic {
+        padding-top: 10vh;
+      }
+
+      .vl {
+        border-left: 6px solid #1abc9c;
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 20vh;
+      }
+
+      button.login {
+        background-color: #1abc9c;
+        font-family: "Geologica", sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        gap: none;
+        padding: 20px 198.3px;
+        border: none;
+        border-radius: none;
+      }
+
+      input {
+        width: 444.7px;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      ::placeholder {
+        font-size: 15px;
+      }
+      .google {
+        background-color: #dd4b39;
+        color: white;
+      }
+      .btn {
+        width: 430px;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none; /* remove underline from anchors */
+      }
+
+      .google:hover{
+        color:#dd4b39 ;
+      }
+      .login-section {
+            padding: 100px 0;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .login-form {
+            margin-top: 40px;
+        }
+
+
+
+
+
+.hero{
+    background-image: url(https://i.ibb.co/Jct578n/hero.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.left,.right{
+    height: 800px;
+    padding: 0 0 0 0;
+    width:50%;
+}
+
+
+.img{
+    opacity: 90%;
+    width: 700px;
+    height: 800px;
+}
+
+.left{
+
+    
+    color: white;
+
+    background-image: linear-gradient(135deg,hsl(232deg 61% 10%) 0%,hsl(232deg 61% 11%) 5%,hsl(231deg 61% 11%) 14%,hsl(230deg 62% 12%) 25%,hsl(229deg 62% 12%) 36%,hsl(230deg 62% 13%) 48%,hsl(230deg 61% 13%) 61%,hsl(231deg 60% 14%) 73%,hsl(231deg 59% 14%) 87%,hsl(232deg 58% 15%) 100%);
+}
+
+
+.big-heading{
+    color: white;
+    /* position: absolute; */
+    padding-top:240px ;
+    text-align: center;
+    font-size: 7.2rem;
+    letter-spacing: 8px;
+}
+
+.title{
+    
+    text-align: center;
+}
+
+.main-desc{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+.our-services{
+    text-align: center;
+}
+
+.big-heading,.main-heading{
+    font-family:"Noto Serif" ;
+}
+
+.submit{
+    color: darkgreen;
+    font-weight: 700;
+    background-color: #ffffff;
+    padding: 20px 25px;
+
+    border:none;
+    border-radius: 10px;
+}
+
+/* Explore Section  */
+
+#explore{
+    color: white;
+    padding: 5% 6%;
+    /* text-align: left; */
+    background-color: white;
+    margin-top: 60px;
+    position: relative;
+    z-index: 5;
+}
+
+
+.explore-image{
+    border-radius: 10px;
+    text-align: left;
+    width: 600px;
+    height: 400px;
+}
+
+.desc{
+    text-align: justify;
+    padding: 9px 30px 10px 40px;
+    color: rgb(255, 255, 255);
+    font-family:"Noto Sans", sans-serif;
+    font-size: 1.3rem;
+}
+
+.explore-title{
+    font-family:"Noto Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    padding-left: 40px;
+    text-align:left;
+    color: #61c24e;
+    
+}
+
+.explore-title-second{
+    font-family:"Noto Serif" ;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #3E131C;
+    text-align: left;
+}
+
+.desc-second{
+    text-align: left;
+    padding: 9px 30px 10px 0px;
+    color: rgb(62, 62, 62);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.both{
+    margin-bottom: 50px;
+    flex: 1;
+}
+
+.learn-more{
+    background-color: #3e131cea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    width: 200px;
+    margin-left: 40px;
+}
+.learn-more-2{
+    background-color: #3e131cea;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    width: 200px;
+}
+
+
+/* Footer */
+
+#footer{
+    text-align: center;
+    padding: 7% 36% ;
+}
+
+.footer-icons{
+    font-size: 2rem;
+    color:#3E131C;
+    text-align: center;
+    width: 100px;
+    padding: 8% 5%;
+}
+
+.copyright{
+    color: #8f8f8f;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+    /* chatbot */
+    .container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.chatbox {
+    position: relative;
+}
+
+.scrolled-down .container {
+    bottom: 10px; /* Adjust position when scrolled down */
+    right: 10px; /* Adjust position when scrolled down */
+}
+
+    .chatbox__header{
+        background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    }
+
+    .chatbox__footer{
+        background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    }
+
+    .chatbox__button img{
+        height: 35px;
+        width: 38px;
+    }
+
+
+    /* GSAP */
+    * {
+  box-sizing: border-box;
+  padding: 0;
+}
+body, html {
+  margin: 0;
+}
+.ends {
+  min-height: 50vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.slides .list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.slides .slide {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slide .background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  will-change: transform;
+  background-size: cover;
+}
+
+.slide .content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  width: 95%;
+  padding: 3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 40rem;
+  position: relative;
+  /* align-items: center; */
+  color: white;
+  text-transform: uppercase;
+  font-size: 4.6rem;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+
+.crop-disease{
+  display: none;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #00aa33;
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.nav-link{
+    font-size: 14px;
+}
+
+
+</style>
+<body>
+
+<!-- NavBar -->
+   
+<nav class="navbar navbar-expand-sm navbar-light">
+  <div class="container-fluid navContainer">
+  <a class="navbar-brand logo" href="">AGRONEST</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+    <li class="nav-item">
+      <a class="nav-link " aria-current="page" href="/static/services.html">Rent a Tool</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/static/weather.html">Weather Forecast</a>
+    </li>			
+    <li class="nav-item">
+      <a class="nav-link" href="crop-disease.html">Crop Disease Detection</a>
+    </li>			
+    <li class="nav-item">
+      <a class="nav-link" href="ecommerce/index.html">Ecommerce</a>
+    </li>			
+          
+    </ul>		  
+  </div>
+  </div>
+</nav>
+
+   
+    
+
+
+
+    <!-- Main -->
+
+    <section class="hero">
+        <div class="title">
+            <h1 class="big-heading">AgroNest</h1>
+        </div><br>
+        <div class="desc">
+            <p class="main-desc">A platform designed to empower farmers by offering essential agricultural services.</p>
+        </div><br>
+        <div class="our-services">
+            <a href="{{ url_for('static', filename='services.html') }}"><button class="submit">Our Services</button></a>
+        </div>
+    </section>
+
+<!-- Explore Section -->
+
+
+<main>
+    <section class="ends">
+        Services Provided
+    </section>
+    <section class="slides">
+      <ul class="list">
+        <li class="slide">
+            <div class="background" style="background-image: url('/static/images/toolRenting.png');
+            position: relative;
+            ">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.769); z-index: 1;"></div>
+          <div style="position: absolute; z-index: 2;"  class="content ">
+            <h3  class="explore-title">Tool Renting</h3>
+            
+            
+            <p class="desc">Our aim is to provide farmers with cost-effective and convenient access to a  variety of tools without the need for significant upfront investments or  ownership.
+            </p>
+          </div>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="background" style="background-image: url('/static/images/banner-ecommerce.jpg');
+            ">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.769); z-index: 1;"></div>
+          <div style="position: absolute; z-index: 2;"  class="content ">
+            <h3  class="explore-title">Ecommerce</h3>
+            
+            
+            <p class="desc">An e-commerce platform for farmers to facilitate the buying  and selling of agricultural products and supplies online, providing  farmers with a convenient way to access essential resources.
+            </p>
+          </div>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="background" style="background-image: url('/static/images/cropDetection.png');
+            ">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.769); z-index: 1;"></div>
+          <div style="position: absolute; z-index: 2;"  class="content">
+            <h3  class="explore-title">Crop Disease Detection</h3>
+            
+            
+            <p class="desc">A crop disease detection AI model for farmers that utilizes artificial intelligence to identify and diagnose  diseases affecting crops.
+            </p>
+        </div>
+          </div>
+        </li>
+        <li class="slide">
+            <div class="background" style="background-image: url('/static/images/chatbot.png');
+              ">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.769); z-index: 1;"></div>
+            <div style="position: absolute; z-index: 2;"  class="content">
+              <h3  class="explore-title">Chatbot</h3>
+              
+              
+              <p class="desc">Developing a virtual assistant that can engage with farmers, providing  information, assistance, and support across various aspects of  agriculture.
+              </p>
+          </div>
+            </div>
+          </li>
+        
+      </ul>
+    </section>
+    
+  </main>
+
+    <!-- chatbox -->
+
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Avani. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer" style="padding: 15px;">
+                <input type="text" id="userInput" placeholder="Write a message...">
+                <button class="chatbox__send--footer" id="sendButton" style="background-color: transparent; outline: none; border: none; width: 30px; margin-right: 10px;">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button" id="openButton">
+            <button><img src="{{ url_for('static', filename='images/cc.png') }}" /></button>
+        </div>
+    </div>
+</div>
+
+<!-- Crop Disease Detection -->
+<section class="crop-disease">
+<h1>Crop Disease Detection</h1>
+
+    <form id="upload-form">
+        <input type="file" id="image-upload" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result">
+        <!-- Prediction Result will be displayed here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#upload-form').submit(function(event) {
+                event.preventDefault();
+
+                let formData = new FormData();
+                formData.append('file', $('#image-upload')[0].files[0]);
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/predict',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        $('#result').html(`<h3>Prediction: ${response.class}</h3><p>Confidence: ${response.confidence.toFixed(2)}%</p>`);
+                    },
+                    error: function(error) {
+                        console.error("Error:", error);
+                        $('#result').html('<p>Error predicting the image. Please try again.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+
+</section>
+<!-- Footer -->
+
+<footer id="footer">
+    <div class="row">
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+    </div>
+
+    <p class="copyright">© Copyright FinanceWise</p>
+
+  </footer>
+
+<script>
+    var SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) { // Adjust the scroll threshold as needed
+            container.classList.add('scrolled-down');
+        } else {
+            container.classList.remove('scrolled-down');
+        }
+    });
+    gsap.registerPlugin(ScrollTrigger);
+
+let container = document.querySelector(".slides"),
+    slides = gsap.utils.toArray(".slide"),
+    getRatio = (el) => window.innerHeight / (window.innerHeight + el.offsetHeight);
+
+slides.forEach((slide, i) => {
+  let bg = slide.querySelector(".background"),
+      content = slide.querySelector(".content"),
+      tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: slide,
+              start: () => i ? "top bottom" : "top top",
+              end: "bottom top",
+              scrub: true,
+              invalidateOnRefresh: true
+            }
+          });
+
+  tl.fromTo(bg, {
+      y: () => i ? -window.innerHeight * getRatio(slide) : 0
+    }, {
+      y: () => window.innerHeight * (1 - getRatio(slide)),
+      ease: "none"
+    });
+  tl.fromTo(content, {
+      y: () => i ? window.innerHeight * -getRatio(slide) * 2 : 0
+    }, {
+      y: () => window.innerHeight * getRatio(slide) * 2,
+      ease: "none"
+    }, 0);
+});
+
+    </script>
+</body>
+</html>

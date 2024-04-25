@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Rubik:wght@300;400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/9eafa9cb6c.js" crossorigin="anonymous"></script>
+
+    <title>AgroNest</title>
+    <style>
+        .vl1 {
+        position: absolute;
+        top: 120px;
+        left: 48%;
+        border-left: 6px solid rgb(255, 255, 255);
+        height: 500px;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        height: fit-content;
+      }
+
+      .grid-item {
+        height: 100vh;
+      }
+
+      .first {
+        font-family: "Geologica", sans-serif;
+        font-weight: 800;
+        line-height: 40px;
+        color: #1abc9c;
+        text-align: center;
+        background: #ffffff;
+        border: none;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 60px;
+      }
+
+      h1.heading1 {
+        padding-top: 36vh;
+      }
+
+      .second {
+        text-align: center;
+        background-color: #ffffff;
+      }
+
+      .basic {
+        padding-top: 10vh;
+      }
+
+      .vl {
+        border-left: 6px solid #1abc9c;
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 20vh;
+      }
+
+      button.login {
+        background-color: #1abc9c;
+        font-family: "Geologica", sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        gap: none;
+        padding: 20px 198.3px;
+        border: none;
+        border-radius: none;
+      }
+
+      input {
+        width: 444.7px;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      ::placeholder {
+        font-size: 15px;
+      }
+      .google {
+        background-color: #dd4b39;
+        color: white;
+      }
+      .btn {
+        width: 430px;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none; /* remove underline from anchors */
+      }
+
+      .google:hover{
+        color:#dd4b39 ;
+      }
+      .login-section {
+            padding: 100px 0;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .login-form {
+            margin-top: 40px;
+        }
+
+
+
+nav{
+    top: 23px;
+    text-align: right;
+    width:70%;
+    background-color: rgba(21, 21, 21, 0.218);
+    position: absolute;
+    z-index: 2;
+    padding: 1% 4%;
+    margin-left: 4%;
+    left: 12%;
+    border-radius: 17px;
+    font-size: 20px;
+}
+
+
+
+.navlinks{
+    color:white;
+    font-weight: 400;
+    padding: 0px 90px;
+    text-decoration: none;
+    font-family: "Roboto Condensed";
+}
+
+.logo{
+    padding-right: 6%;
+    color: white;
+    text-decoration: none;
+    font-family:"Noto Serif" ;
+    font-weight: 700;
+}
+
+.hero{
+    background-image: url(/assets/hero.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.left,.right{
+    height: 800px;
+    padding: 0 0 0 0;
+    width:50%;
+}
+
+
+.img{
+    opacity: 90%;
+    width: 700px;
+    height: 800px;
+}
+
+.left{
+
+    
+    color: white;
+
+    background-image: linear-gradient(135deg,hsl(232deg 61% 10%) 0%,hsl(232deg 61% 11%) 5%,hsl(231deg 61% 11%) 14%,hsl(230deg 62% 12%) 25%,hsl(229deg 62% 12%) 36%,hsl(230deg 62% 13%) 48%,hsl(230deg 61% 13%) 61%,hsl(231deg 60% 14%) 73%,hsl(231deg 59% 14%) 87%,hsl(232deg 58% 15%) 100%);
+}
+
+
+.big-heading{
+    color: white;
+    /* position: absolute; */
+    padding-top:240px ;
+    text-align: center;
+    font-size: 7.2rem;
+    letter-spacing: 8px;
+}
+
+.title{
+    
+    text-align: center;
+}
+
+.main-desc{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+.our-services{
+    text-align: center;
+}
+
+.big-heading,.main-heading{
+    font-family:"Noto Serif" ;
+}
+
+.submit{
+    color: darkgreen;
+    font-weight: 700;
+    background-color: #ffffff;
+    padding: 20px 25px;
+
+    border:none;
+    border-radius: 10px;
+}
+
+/* Explore Section  */
+
+#explore{
+    color: white;
+    padding: 5% 6%;
+    /* text-align: left; */
+    background-color: white;
+    margin-top: 60px;
+    position: relative;
+    z-index: 5;
+}
+
+
+.explore-image{
+    border-radius: 10px;
+    text-align: left;
+    width: 600px;
+    height: 400px;
+}
+
+.desc{
+    text-align: justify;
+    padding: 9px 30px 10px 40px;
+    color: rgb(62, 62, 62);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.explore-title{
+    font-family:"Noto Serif" ;
+    font-size: 3rem;
+    font-weight: 600;
+    padding-left: 40px;
+    text-align:left;
+    color: #3E131C;
+    
+}
+
+.explore-title-second{
+    font-family:"Noto Serif" ;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #3E131C;
+    text-align: left;
+}
+
+.desc-second{
+    text-align: left;
+    padding: 9px 30px 10px 0px;
+    color: rgb(62, 62, 62);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.both{
+    margin-bottom: 50px;
+}
+
+.learn-more{
+    background-color: #3e131cea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    width: 200px;
+    margin-left: 40px;
+}
+.learn-more-2{
+    background-color: #3e131cea;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    width: 200px;
+}
+
+
+/* Footer */
+
+#footer{
+    text-align: center;
+    padding: 7% 36% ;
+}
+
+.footer-icons{
+    font-size: 2rem;
+    color:#3E131C;
+    text-align: center;
+    width: 100px;
+    padding: 8% 5%;
+}
+
+.copyright{
+    color: #8f8f8f;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Scroll to login section when the "Login / Sign Up" button in the main section is clicked
+            const loginButton = document.getElementById('loginButton');
+            const loginSection = document.getElementById('loginSection');
+
+            loginButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                loginSection.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Scroll to login section when navbar buttons are clicked
+            const homeButton = document.getElementById('homeButton');
+            const loginNavbarButton = document.getElementById('loginNavbarButton');
+            const loginSection1 = document.getElementById('loginSection');
+
+            homeButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                loginSection1.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            loginNavbarButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                loginSection1.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+    <!-- Navbar -->
+    <nav>
+        <div class="link">
+            <a class="logo" href="#">AgroNest</a>
+            <a class="navlinks"  href="#">Home</a>
+            <a class="navlinks" id="loginNavbarButton" href="#">Login</a>
+            <a class="navlinks" id="homeButton">Sign Up</a>
+        </div>
+    </nav>
+    
+
+
+
+    <!-- Main -->
+
+    <section class="hero">
+        <div class="title">
+            <h1 class="big-heading">AgroNest</h1>
+        </div><br>
+        <div class="desc">
+            <p class="main-desc">A platform designed to empower farmers by offering essential agricultural services.</p>
+        </div><br>
+        <div class="our-services">
+            <button class="submit">Our Services</button>
+        </div>
+    </section>
+
+<!-- Explore Section -->
+
+<section id="explore">
+    <div class="row">
+        <div class="col-lg-6 both">
+            <img class="explore-image" src="/assets/toolRenting.png" alt="">
+        </div>
+        <div class="col-lg-6 both ">
+            <h3 class="explore-title">Tool Renting</h3>
+            <br/>
+            
+            <p class="desc">Our aim is to provide farmers with cost-effective and convenient access to a  variety of tools without the need for significant upfront investments or  ownership.
+            </p>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 both">
+            <h3 class="explore-title-second">Ecommerce</h3>
+            <br/>
+            
+            <p class="desc-second">
+                An e-commerce platform for farmers to facilitate the buying  and selling of agricultural products and supplies online, providing  farmers with a convenient way to access essential resources
+            </p>
+            
+        </div>
+        <div class="col-lg-6 both">
+            <img class="explore-image" src="https://media.istockphoto.com/id/1215574547/photo/u-s-dollar-manipulation.jpg?s=612x612&w=0&k=20&c=Nr_Ftz9BTk_QUUiV_gufMFknk8Mh6VjZX75PkMeHhJQ=" alt="">
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-lg-6 both">
+            <img class="explore-image" src="/assets/cropDetection.png" alt="">
+        </div>
+        <div class="col-lg-6 both">
+            <h3 class="explore-title">Crop Disease Detection</h3>
+            <br/>
+            
+            <p class="desc">
+                A crop disease detection AI model for farmers that utilizes artificial intelligence to identify and diagnose  diseases affecting crops
+            </p>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 both">
+            <h3 class="explore-title">ChatBot</h3>
+            <br/>
+            
+            <p class="desc">
+                Developing a virtual assistant that can engage with farmers, providing  information, assistance, and support across various aspects of  agriculture.
+            </p>
+            
+        </div>
+        <div class="col-lg-6 both">
+            <img class="explore-image" src="/assets/chatbot.png" alt="">
+        </div>
+        
+    </div>
+  
+</section>
+<!-- login-->
+
+<section id="loginSection" class="login-section">
+    <div class="login-container">
+        <h1 style="color: #000000;">Login</h1>
+        <br>
+        <form class="login-form" action="/login" method="POST">
+            <input type="text" placeholder="Enter your username" name="username" required><br><br>
+            <input type="password" placeholder="Enter password" name="password" required><br><br>
+            <button class="login" type="submit">Login</button>
+        </form><br><br>
+        <h3 style="color: #000000;">Or</h3>
+        <a href="/auth/google" role="button" class="google btn">
+            <i class="fa fa-google fa-fw"></i> Login with Google+
+        </a><br><br>
+        <h4 style="color: #000000;">New to this website? <a href="/signUp">Sign Up Here</a></h4>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+<footer id="footer">
+    <div class="row">
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="col-lg-3 footer-icons">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+    </div>
+
+    <p class="copyright">© Copyright FinanceWise</p>
+
+  </footer>
+  
+
+
+
+</body>
+</html>
